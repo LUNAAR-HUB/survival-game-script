@@ -1,1 +1,79 @@
+-- so yeah I'm back trying luaU again with narrator
+
+
+--this local library is compatible in mobile so you can move it credits to sytronight
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/vqfx/SytroNight4ROBLOX/main/libraries/kavo.lua"))()
+
+local Window = Library.CreateLib("NUBULA C", "Serpent")
+
+ local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("ImageLabel")
+local TextButton = Instance.new("TextButton")
+local textlabel = Instance.new("TextLabel")
+ScreenGui.ResetOnSpawn = false
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+Frame.Name = "Frame"
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
+Frame.Position = UDim2.new(0, 50, 0, 20)
+Frame.Size = UDim2.new(0, 100, 0, 100)
+Frame.Image = "rbxassetid://3570695787"
+Frame.ImageColor3 = Color3.fromRGB(11, 18, 7)
+Frame.ImageTransparency = 0.200
+Frame.ScaleType = Enum.ScaleType.Slice
+Frame.SliceCenter = Rect.new(100, 100, 100, 100)
+Frame.SliceScale = 0.120
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
+TextButton.Position = UDim2.new(0, 0, 0, 20)
+TextButton.Size = UDim2.new(0, 100, 0, 60)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Gamebreaker"
+TextButton.TextColor3 = Color3.fromRGB(0, 34, 255)
+TextButton.TextSize = 20.000
+TextButton.TextWrapped = true
+TextButton.MouseButton1Down:connect(function()
+    Gb:ToggleUI()
+end)
+
+textlabel.Size = UDim2.new(1, 0, 0, 36)
+textlabel.Text = "Always use alt's when exploiting!"
+textlabel.BackgroundTransparency = 1
+textlabel.TextStrokeTransparency = 0
+textlabel.TextSize = 30
+textlabel.Font = Enum.Font.SourceSans
+textlabel.TextColor3 = Color3.new(1, 1, 1)
+textlabel.Position = UDim2.new(0, 0, 0, -36)
+textlabel.Parent = ScreenGui
+  
+  
+ local colorbox 
+ local function makeRainbowText(text) 
+         spawn(function() 
+                 colorbox = Color3.fromRGB(170,0,170) 
+                 local x = 0 
+                 while wait() do 
+                         colorbox = Color3.fromHSV(x,1,1) 
+                         x = x + 4.5/255 
+                         if x >= 1 then 
+                                 x = 0 
+                         end 
+                 end 
+         end) 
+         spawn(function() 
+                 repeat 
+                         wait() 
+                         text.TextColor3 = colorbox 
+                 until true == false 
+         end) 
+ end 
+
 
