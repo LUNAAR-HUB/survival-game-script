@@ -1,5 +1,29 @@
--- so yeah I'm back trying luaU again with narrator
 
+--hitbox script
+
+-- Variables
+local player = game.Players.LocalPlayer
+local mouse = player:GetMouse()
+
+-- Settings
+
+bind = "" 
+bind2 = "t"
+
+-- Script
+
+mouse.KeyDown:connect(function(key)
+if key == bind then
+player.Character.HumanoidRootPart.CFrame = CFrame.new(1254.09656, 137.906067, -172.128204)
+end
+end)
+
+mouse.KeyDown:connect(function(key2)
+if key2 == bind2 then
+_G.HeadSize = 20
+_G.Disabled = true
+
+-----------------------------------------------------------
 
 --this local library is compatible in mobile so you can move it credits to sytronight
 
@@ -36,7 +60,7 @@ TextButton.BackgroundTransparency = 1.000
 TextButton.Position = UDim2.new(0, 0, 0, 20)
 TextButton.Size = UDim2.new(0, 100, 0, 60)
 TextButton.Font = Enum.Font.SourceSans
-TextButton.Text = "NEBULA C"
+TextButton.Text = "Gamebreaker"
 TextButton.TextColor3 = Color3.fromRGB(0, 34, 255)
 TextButton.TextSize = 20.000
 TextButton.TextWrapped = true
@@ -45,7 +69,7 @@ TextButton.MouseButton1Down:connect(function()
 end)
 
 textlabel.Size = UDim2.new(1, 0, 0, 36)
-textlabel.Text = "guess what your gay"
+textlabel.Text = "Always use alt's when exploiting!"
 textlabel.BackgroundTransparency = 1
 textlabel.TextStrokeTransparency = 0
 textlabel.TextSize = 30
@@ -76,9 +100,33 @@ textlabel.Parent = ScreenGui
          end) 
  end 
 
---TABS MAKE SURE ITS ORGANIZE
+--TABS CREDITS MAKE SURE ITS ORGANIZE
 
 local Tab1 = Window:NewTab("Credits") 
 local Tab1Section = Tab1:NewSection("DEVELOPER | SEILAH") 
 local Tab1Section = Tab1:NewSection("HEAD DEVELOPER | LUNAAR") 
 local Tab1Section = Tab1:NewSection("CO  DEVELOPER | UNKNOWN") 
+
+--Main tabs
+
+local Tab2 = Window:NewTab("MAIN") 
+
+--Scripts
+
+Tab2Section:NewToggle("hitbox expander", "ToggleInfo", function(state)
+    if state then
+        if _G.Disabled then
+for i,v in next, game:GetService('Players'):GetPlayers() do
+if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+pcall(function()
+v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+v.Character.HumanoidRootPart.Transparency = 0.7
+v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really blue")
+v.Character.HumanoidRootPart.Material = "Neon"
+v.Character.HumanoidRootPart.CanCollide = false
+end)
+end
+end
+end
+end
+end)
