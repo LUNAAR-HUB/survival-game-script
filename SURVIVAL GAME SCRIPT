@@ -36,7 +36,7 @@ TextButton.BackgroundTransparency = 1.000
 TextButton.Position = UDim2.new(0, 0, 0, 20)
 TextButton.Size = UDim2.new(0, 100, 0, 60)
 TextButton.Font = Enum.Font.SourceSans
-TextButton.Text = "Gamebreaker"
+TextButton.Text = "NEBULA C"
 TextButton.TextColor3 = Color3.fromRGB(0, 34, 255)
 TextButton.TextSize = 20.000
 TextButton.TextWrapped = true
@@ -45,7 +45,7 @@ TextButton.MouseButton1Down:connect(function()
 end)
 
 textlabel.Size = UDim2.new(1, 0, 0, 36)
-textlabel.Text = "Always use alt's when exploiting!"
+textlabel.Text = "guess what your gay"
 textlabel.BackgroundTransparency = 1
 textlabel.TextStrokeTransparency = 0
 textlabel.TextSize = 30
