@@ -76,4 +76,9 @@ textlabel.Parent = ScreenGui
          end) 
  end 
 
+--TABS MAKE SURE ITS ORGANIZE
 
+local Tab1 = Window:NewTab("Credits") 
+local Tab1Section = Tab1:NewSection("DEVELOPER | SEILAH") 
+local Tab1Section = Tab1:NewSection("HEAD DEVELOPER | LUNAAR") 
+local Tab1Section = Tab1:NewSection("CO  DEVELOPER | UNKNOWN") 
